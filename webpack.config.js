@@ -1,5 +1,10 @@
 module.exports = {
   entry: './src/index.js',
+  output: {
+    library: "MyLibrary",
+    libraryTarget: 'umd',
+    umdNamedDefine: true
+  },
   module: {
     rules: [
       {

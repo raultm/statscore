@@ -3,7 +3,7 @@ import League from './models/League'
 import Season from './models/Season'
 import Competition from './models/BaseModel'
 
-module.exports = {
+export default {
   BaseModel,
   League,
   Season,
