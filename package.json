@@ -1,6 +1,6 @@
 {
   "name": "statscore",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Domain Logic of Stats for Football games",
   "main": "dist/main.js",
   "scripts": {
