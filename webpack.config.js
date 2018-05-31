@@ -1,9 +1,10 @@
 module.exports = {
   entry: './src/index.js',
   output: {
-    library: "MyLibrary",
+    library: "statscore",
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    globalObject: "this"
   },
   module: {
     rules: [
