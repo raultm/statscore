@@ -1,7 +1,9 @@
-import Competition from '../../src/models/Competition'
-import BaseModel from '../../src/models/BaseModel'
-import League from '../../src/models/League'
-import Season from '../../src/models/Season'
+import {
+  BaseModel,
+  Competition,
+  League,
+  Season,
+} from '../../src/index'
 
 it('Competition is an AppModel Subclass', () => {
   let competition = new Competition();

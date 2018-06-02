@@ -1,5 +1,7 @@
-import BaseModel from '../../src/models/BaseModel'
-import Season from '../../src/models/Season'
+import {
+  BaseModel,
+  Season,
+} from '../../src/index'
 
 it('Season is an AppModel Subclass', () => {
   let season = new Season();

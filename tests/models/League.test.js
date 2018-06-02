@@ -1,6 +1,7 @@
-import BaseModel from '../../src/models/BaseModel'
-import League from '../../src/models/League'
-
+import {
+  BaseModel,
+  League,
+} from '../../src/index'
 
 it('League is an AppModel Subclass', () => {
   let league = new League();

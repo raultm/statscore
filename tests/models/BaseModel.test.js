@@ -1,4 +1,6 @@
-import BaseModel from '../../src/models/BaseModel'
+import {
+  BaseModel,
+} from '../../src/index'
 
 it('Base Model NOT empty id by default', () => {
   let model = new BaseModel();

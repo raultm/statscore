@@ -1,7 +1,7 @@
 import BaseModel from './models/BaseModel'
 import League from './models/League'
 import Season from './models/Season'
-import Competition from './models/BaseModel'
+import Competition from './models/Competition'
 
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
