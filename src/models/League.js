@@ -1,6 +1,7 @@
 import BaseModel from './BaseModel'
 
 export default class League extends BaseModel {
+
   constructor(params) {
     super(params)
     const data = { organization: '', ...params }
