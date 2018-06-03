@@ -6,6 +6,7 @@ import Competition from './models/Competition'
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
 import getCompetitionsCollectionUseCase from './interactors/getCompetitionsCollectionUseCase'
+import createCompetitionsUseCase from './interactors/createCompetitionsUseCase'
 
 export {
   // Models
@@ -18,4 +19,5 @@ export {
   getLeaguesCollectionUseCase,
   getSeasonsCollectionUseCase,
   getCompetitionsCollectionUseCase,
+  createCompetitionsUseCase,
 }
