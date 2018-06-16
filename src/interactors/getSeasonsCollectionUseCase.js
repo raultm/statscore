@@ -5,7 +5,7 @@ export default async function getSeasonsCollectionUseCase({
   respondWithError = error => error,
 } = {}) {
   try {
-    respondWithCollection(await getAllSeasons())
+    return respondWithCollection(await getAllSeasons())
   } catch (error) {
     respondWithError(error)
   }

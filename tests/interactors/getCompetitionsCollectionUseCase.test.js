@@ -43,6 +43,16 @@ describe('getCompetitionsCollectionUseCase', () => {
     sinon.assert.calledOnce(options.respondWithError)
   })
 
+  it('return the collection if not respondWithCollection is set in params', async() => {
+    let collection = [1,2,3]
+    const options = { ...defaultOptions,
+      getAllCompetitions : () => collection
+    }
+    delete options.respondWithCollection
+    let collectionReturned = await getCompetitionsCollectionUseCase(options)
+    expect(collectionReturned).toBe(collection) 
+  })
+
   const defaultOptions = {
     getAllCompetitions : () => [],
     respondWithCollection : collection => collection,

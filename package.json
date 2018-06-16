@@ -1,6 +1,6 @@
 {
   "name": "statscore",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Domain Logic of Stats for Football games",
   "main": "dist/main.js",
   "scripts": {
@@ -14,17 +14,18 @@
     "@babel/plugin-transform-runtime": "^7.0.0-beta.49",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "*",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.11",
     "jest": "^23.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "sinon": "^5.0.10",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
-    "webpack-command": "^0.2.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-jest": "*"
+    "webpack-command": "^0.2.0"
   }
 }

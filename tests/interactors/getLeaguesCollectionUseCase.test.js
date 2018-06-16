@@ -43,6 +43,16 @@ describe('getLeaguesCollectionUseCase', () => {
     sinon.assert.calledOnce(options.respondWithError)
   })
 
+  it('return the collection if not respondWithCollection is set in params', async() => {
+    let collection = [1,2,3]
+    const options = { ...defaultOptions,
+      getAllLeagues : () => collection
+    }
+    delete options.respondWithCollection
+    let collectionReturned = await getLeaguesCollectionUseCase(options)
+    expect(collectionReturned).toBe(collection) 
+  })
+
   const defaultOptions = {
     getAllLeagues : () => [],
     respondWithCollection : collection => collection,

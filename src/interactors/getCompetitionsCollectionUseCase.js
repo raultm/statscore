@@ -4,7 +4,7 @@ export default async function getCompetitionsCollectionUseCase({
   respondWithError = error => error,
 } = {}) {
   try {
-    respondWithCollection(await getAllCompetitions())
+    return respondWithCollection(await getAllCompetitions())
   } catch (error) {
     respondWithError(error)
   }

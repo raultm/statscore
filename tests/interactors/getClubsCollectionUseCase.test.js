@@ -1,36 +1,36 @@
 import {
-  Season,
-  getSeasonsCollectionUseCase
+  Club,
+  getClubsCollectionUseCase
 } from '../../src/index'
 import sinon from 'sinon'
 
 
 
-describe('getSeasonsCollectionUseCase', () => {
+describe('getClubsCollectionUseCase', () => {
 
-  it('try to get all seasons', async () => {
+  it('try to get all Clubs', async () => {
     const options = { ...defaultOptions,
-      getAllSeasons : sinon.spy(),
+      getAllClubs : sinon.spy(),
     }
-    await getSeasonsCollectionUseCase(options)
-    sinon.assert.calledOnce(options.getAllSeasons)
+    await getClubsCollectionUseCase(options)
+    sinon.assert.calledOnce(options.getAllClubs)
   })
 
-  it('respond with collection even if empty array of seasons', async () => {
+  it('respond with collection even if empty array of Clubs', async () => {
     const options = { ...defaultOptions,
-      getAllSeasons : () => [],
+      getAllClubs : () => [],
       respondWithCollection: sinon.spy()
     }
-    await getSeasonsCollectionUseCase(options)
+    await getClubsCollectionUseCase(options)
     sinon.assert.calledOnce(options.respondWithCollection)
   })
 
-  it('respond with an error if error on try to get all seasons', async() => {
+  it('respond with an error if error on try to get all Clubs', async() => {
     const options = { ...defaultOptions,
-      getAllSeasons : () => { throw new Error() },
+      getAllClubs : () => { throw new Error() },
       respondWithError: sinon.spy()
     }
-    await getSeasonsCollectionUseCase(options)
+    await getClubsCollectionUseCase(options)
     sinon.assert.calledOnce(options.respondWithError)
   })
 
@@ -39,22 +39,22 @@ describe('getSeasonsCollectionUseCase', () => {
       respondWithCollection : () => { throw new Error() },
       respondWithError: sinon.spy()
     }
-    await getSeasonsCollectionUseCase(options)
+    await getClubsCollectionUseCase(options)
     sinon.assert.calledOnce(options.respondWithError)
   })
 
   it('return the collection if not respondWithCollection is set in params', async() => {
     let collection = [1,2,3]
     const options = { ...defaultOptions,
-      getAllSeasons : () => collection
+      getAllClubs : () => collection
     }
     delete options.respondWithCollection
-    let collectionReturned = await getSeasonsCollectionUseCase(options)
+    let collectionReturned = await getClubsCollectionUseCase(options)
     expect(collectionReturned).toBe(collection) 
   })
 
   const defaultOptions = {
-    getAllSeasons : () => [],
+    getAllClubs : () => [],
     respondWithCollection : collection => collection,
     respondWithError : error => error
   }
