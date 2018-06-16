@@ -5,7 +5,7 @@ export default async function getLeaguesCollectionUseCase({
   respondWithError = error => error,
 } = {}) {
   try {
-    respondWithCollection(await getAllLeagues())
+    return respondWithCollection(await getAllLeagues())
   } catch (error) {
     respondWithError(error)
   }

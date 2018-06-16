@@ -43,6 +43,16 @@ describe('getSeasonsCollectionUseCase', () => {
     sinon.assert.calledOnce(options.respondWithError)
   })
 
+  it('return the collection if not respondWithCollection is set in params', async() => {
+    let collection = [1,2,3]
+    const options = { ...defaultOptions,
+      getAllSeasons : () => collection
+    }
+    delete options.respondWithCollection
+    let collectionReturned = await getSeasonsCollectionUseCase(options)
+    expect(collectionReturned).toBe(collection) 
+  })
+
   const defaultOptions = {
     getAllSeasons : () => [],
     respondWithCollection : collection => collection,
