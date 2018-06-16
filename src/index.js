@@ -4,6 +4,7 @@ import Season from './models/Season'
 import Competition from './models/Competition'
 import Club from './models/Club'
 import Team from './models/Team'
+import Match from './models/Match'
 
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
@@ -19,6 +20,7 @@ export {
   Competition,
   Club,
   Team,
+  Match,
 
   // Interactors
   getLeaguesCollectionUseCase,
