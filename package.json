@@ -1,11 +1,12 @@
 {
   "name": "statscore",
-  "version": "0.5.11",
+  "version": "0.5.12",
   "description": "Domain Logic of Stats for Football games",
   "main": "dist/main.js",
   "scripts": {
-    "test": "jest --watchAll --notify",
+    "test": "jest",
     "t": "jest",
+    "dev": "jest --watchAll --notify",
     "build": "webpack -p",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
