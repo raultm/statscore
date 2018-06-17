@@ -11,6 +11,7 @@ import Round from './models/Round'
 import Role from './models/Role'
 import Period from './models/Period'
 import Squad from './models/Squad'
+import Stat from './models/Stat'
 
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
@@ -34,6 +35,7 @@ export {
   Role,
   Period,
   Squad,
+  Stat,
 
   // Interactors
   getLeaguesCollectionUseCase,
