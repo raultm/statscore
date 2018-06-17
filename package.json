@@ -1,13 +1,13 @@
 {
   "name": "statscore",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "Domain Logic of Stats for Football games",
   "main": "dist/main.js",
   "scripts": {
     "test": "jest --watchAll --notify",
     "t": "jest",
     "build": "webpack --verbose",
-    "preversion" : "webpack -p"
+    "preversion": "webpack -p"
   },
   "author": "Raul Tierno",
   "license": "ISC",
