@@ -8,6 +8,7 @@ import Match from './models/Match'
 import Actor from './models/Actor'
 import Group from './models/Group'
 import Round from './models/Round'
+import Role from './models/Role'
 
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
@@ -28,6 +29,7 @@ export {
   Actor,
   Group,
   Round,
+  Role,
 
   // Interactors
   getLeaguesCollectionUseCase,
