@@ -19,6 +19,7 @@ import getCompetitionsCollectionUseCase from './interactors/getCompetitionsColle
 import createCompetitionsUseCase from './interactors/createCompetitionsUseCase'
 import getClubsCollectionUseCase from './interactors/getClubsCollectionUseCase'
 import createMatchUseCase from './interactors/createMatchUseCase'
+import createTeamUseCase from './interactors/createTeamUseCase'
 import createSquadUseCase from './interactors/createSquadUseCase'
 
 export {
@@ -45,5 +46,6 @@ export {
   createCompetitionsUseCase,
   getClubsCollectionUseCase,
   createMatchUseCase,
+  createTeamUseCase,
   createSquadUseCase,
 }
