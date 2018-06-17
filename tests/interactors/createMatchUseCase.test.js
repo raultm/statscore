@@ -70,6 +70,17 @@ describe('createMatchUseCase', () => {
     sinon.assert.calledOnce(options.respondWithError)
   })
 
+  it('return the match if not respondWithMatch is set in params', async() => {
+    let match = new Match();
+    const options = { ...defaultOptions,
+      match : match,
+      saveMatch : match => match
+    }
+    delete options.respondWithMatch
+    let matchReturned = await createMatchUseCase(options)
+    expect(matchReturned).toBe(match) 
+  })
+
   const defaultMatch = new Match({});
 
   const defaultOptions = {

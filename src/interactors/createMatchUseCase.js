@@ -22,7 +22,7 @@ export default async function createMatchUseCase({
       throw new Error("match dont validate beforeSave")
     }
     
-    respondWithMatch(await saveMatch(match))
+    return respondWithMatch(await saveMatch(match))
   } catch (error) {
     respondWithError(error)
   }
