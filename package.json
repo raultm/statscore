@@ -9,8 +9,8 @@
     "dev": "jest --watchAll --notify",
     "build": "webpack -p",
     "preversion": "npm test",
-    "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags && rm -rf build/temp"
+    "version": "npm run build && git add dist/main.js",
+    "postversion": "git push origin master && git push origin --tags"
   },
   "author": "Raul Tierno",
   "license": "ISC",
