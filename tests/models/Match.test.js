@@ -3,6 +3,8 @@ import {
   Match,
   Competition,
   Team,
+  Round,
+  Group,
 } from '../../src/index'
 
 it('is an AppModel Subclass', () => {
@@ -32,4 +34,20 @@ it('gets guestTeam given in constructor', () => {
   }
   let match = new Match(parameters)
   expect(match.guestTeam()).toBe(parameters.guestTeam)
+})
+
+it('gets round given in constructor', () => {
+  let parameters = {
+    round: new Round()
+  }
+  let match = new Match(parameters)
+  expect(match.round()).toBe(parameters.round)
+})
+
+it('gets group given in constructor', () => {
+  let parameters = {
+    group: new Group()
+  }
+  let match = new Match(parameters)
+  expect(match.group()).toBe(parameters.group)
 })
