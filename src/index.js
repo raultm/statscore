@@ -5,12 +5,14 @@ import Competition from './models/Competition'
 import Club from './models/Club'
 import Team from './models/Team'
 import Match from './models/Match'
+import Actor from './models/Actor'
 
 import getLeaguesCollectionUseCase from './interactors/getLeaguesCollectionUseCase'
 import getSeasonsCollectionUseCase from './interactors/getSeasonsCollectionUseCase'
 import getCompetitionsCollectionUseCase from './interactors/getCompetitionsCollectionUseCase'
 import createCompetitionsUseCase from './interactors/createCompetitionsUseCase'
 import getClubsCollectionUseCase from './interactors/getClubsCollectionUseCase'
+import createMatchUseCase from './interactors/createMatchUseCase'
 
 export {
   // Models
@@ -21,6 +23,7 @@ export {
   Club,
   Team,
   Match,
+  Actor,
 
   // Interactors
   getLeaguesCollectionUseCase,
@@ -28,4 +31,5 @@ export {
   getCompetitionsCollectionUseCase,
   createCompetitionsUseCase,
   getClubsCollectionUseCase,
+  createMatchUseCase,
 }
